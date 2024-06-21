@@ -20,6 +20,8 @@ StylishClock is an elegant and minimalist analog clock. The project showcases ho
 - Analog clock with smooth transitions.
 - Hour, minute, and second hands that move accurately.
 - Modern and minimalist design.
+- Digital clock display.
+- Current date display.
 - Responsive layout for different screen sizes.
 
 ## Installation
