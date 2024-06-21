@@ -1,22 +1,26 @@
 let secHand = document.querySelector(".second-hand");
-let minHand = document.querySelector(".min-hand");
-let hrHand = document.querySelector(".hour-hand");
+let minsHand = document.querySelector(".min-hand");
+let hourHand = document.querySelector(".hour-hand");
+let digitalClock = document.querySelector(".digital-clock");
+let dateDisplay = document.querySelector(".date-display");
 
-function set_date() {
-  let currentTime = new Date();
-  console.log(currentTime);
+function setDate() {
+  const currentTime = new Date();
 
-  let seconds = currentTime.getSeconds();
-  let secHandDegree = (seconds / 60) * 360 + 90;
-  secHand.style.transform = `rotate(${secHandDegree}deg)`;
+  const seconds = currentTime.getSeconds();
+  const secondsDegrees = (seconds / 60) * 360 + 90;
+  secHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-  let mins = currentTime.getMinutes();
-  let minHandDegree = (mins / 60) * 360 + (seconds / 60) * 6 + 90;
-  minHand.style.transform = `rotate(${minHandDegree}deg)`;
+  const mins = currentTime.getMinutes();
+  const minsDegrees = (mins / 60) * 360 + (seconds / 60) * 6 + 90;
+  minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
-  let hrs = currentTime.getHours();
-  let hrsHandDegree = (hour / 12) * 360 + (mins / 60) * 30 + 90;
-  hrHand.style.transform = `rotate(${hrsHandDegree}deg)`;
+  const hour = currentTime.getHours();
+  const hourDegrees = (hour / 12) * 360 + (mins / 60) * 30 + 90;
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+  digitalClock.textContent = currentTime.toLocaleTimeString();
+  dateDisplay.textContent = currentTime.toDateString();
 }
 
-setInterval(set_date, 1000);
+setInterval(setDate, 1000);
