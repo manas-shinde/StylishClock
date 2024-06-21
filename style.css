@@ -13,6 +13,8 @@ body {
   flex: 1;
   min-height: 100vh;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .clock {
@@ -20,7 +22,7 @@ body {
   height: 30rem;
   border: 20px solid white;
   border-radius: 50%;
-  margin: 50px auto;
+  margin: 20px auto;
   position: relative;
   padding: 2rem;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
@@ -44,4 +46,12 @@ body {
   transform: rotate(90deg);
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.digital-clock,
+.date-display {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 5px black;
 }
